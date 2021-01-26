@@ -21,7 +21,8 @@ GoogleAuthService ->> GoogleAuthService : returnServiceCallback()
 GoogleAuthService -->> GoogleAuthController : return redirect URL
 GoogleAuthController ->> Browser : REDIRECT maum.ai
 Browser ->> GoogleAuthController : /hq/oauth/token
-
+GoogleAuthController ->> GoogleAuthService : requestPublishingTokens()
+GoogleAuthService ->> GoogleAuthController : user info
 
 
 ```
@@ -133,6 +134,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNTg2NTY0NywtMTkxODU2NzczNywtOD
-A3NjY0OTkyLDQ5MzgwOTU0OF19
+eyJoaXN0b3J5IjpbLTE1NTc3NjkyNjUsLTE5MTg1Njc3MzcsLT
+gwNzY2NDk5Miw0OTM4MDk1NDhdfQ==
 -->
