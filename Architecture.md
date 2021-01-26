@@ -18,8 +18,8 @@ Google ->> GoogleAuthService : email
 GoogleAuthService ->> GoogleAuthService : check User_T status
 Note right of GoogleAuthService : if(구독고객)<br/>returnServiceCallback()<br/>else<br/>maum.ai 가입 페이지
 GoogleAuthService ->> GoogleAuthService : returnServiceCallback()
-GoogleAuthService ->> GoogleAuthController : 
-GoogleAuthController ->> Browser : 
+GoogleAuthService -->> GoogleAuthController : return redirect URL
+GoogleAuthController ->> Browser : REDIRECT maum.ai
 
 ```
 
@@ -130,6 +130,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODIzMjgyNywtODA3NjY0OTkyLDQ5Mz
+eyJoaXN0b3J5IjpbLTgzNzk4NTgzOSwtODA3NjY0OTkyLDQ5Mz
 gwOTU0OF19
 -->
