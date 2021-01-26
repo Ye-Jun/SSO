@@ -20,6 +20,8 @@ Note right of GoogleAuthService : if(구독고객)<br/>returnServiceCallback()<b
 GoogleAuthService ->> GoogleAuthService : returnServiceCallback()
 GoogleAuthService -->> GoogleAuthController : return redirect URL
 GoogleAuthController ->> Browser : REDIRECT maum.ai
+Browser ->> GoogleAuthController : /hq/oauth/callback
+
 
 ```
 
@@ -130,6 +132,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNzk4NTgzOSwtODA3NjY0OTkyLDQ5Mz
-gwOTU0OF19
+eyJoaXN0b3J5IjpbLTE5MTg1Njc3MzcsLTgwNzY2NDk5Miw0OT
+M4MDk1NDhdfQ==
 -->
