@@ -16,7 +16,7 @@ GoogleAuthController ->> GoogleAuthService : procGoogleCallback()
 GoogleAuthService ->> Google : getGoogleProfile
 Google ->> GoogleAuthService : email
 GoogleAuthService ->> GoogleAuthService : check User_T status
-Note left of GoogleAuthService : if(구독고객)<br/>returnServiceCallback()<br/>else<br/>maum.ai 가입 페이지
+Note right of GoogleAuthService : if(구독고객)<br/>returnServiceCallback()<br/>else<br/>maum.ai 가입 페이지
 GoogleAuthService ->> GoogleAuthService : returnServiceCallback()
 GoogleAuthService ->> GoogleAuthController : 
 GoogleAuthController ->> Browser : 
@@ -130,5 +130,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNzY2NDk5Miw0OTM4MDk1NDhdfQ==
+eyJoaXN0b3J5IjpbMTQwODIzMjgyNywtODA3NjY0OTkyLDQ5Mz
+gwOTU0OF19
 -->
