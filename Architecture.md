@@ -8,6 +8,7 @@ Note left of GoogleAuthController: if(cookie == null)<br/>초기 로그인<br/> 
 GoogleAuthController ->> GoogleAuthService : authorize()
 GoogleAuthService ->> GoogleAuthService : if(cookie == null) UUID 생성, set cookie(MaumHQ_State)
 GoogleAuthService ->> Google : 인증 요청(redirectUri, scope, state)
+
 Google ->> GoogleAuthController : /hq/oauth/callback
 GoogleAuthController ->> GoogleAuthService : procGoogleCallback()
 GoogleAuthService ->> Google : getGoogleProfile
@@ -127,5 +128,5 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzODA5NTQ4XX0=
+eyJoaXN0b3J5IjpbMTM3MzE4OTkxOCw0OTM4MDk1NDhdfQ==
 -->
