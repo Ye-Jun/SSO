@@ -30,8 +30,9 @@ GoogleAuthController -->> Browser : REDIRECT TO main page
 - 회원가입 유도
 ```mermaid
 sequenceDiagram
-Browser ->> GoogleAuthConroller : 
-GoogleAuthController ->> GoogleAuthService :
+Browser ->> GoogleAuthController : /hq/oauth/signup-member-callback
+GoogleAuthController ->> GoogleAuthService : returnServiceCallback()
+
 ```
 
 /hq/oauth/signup-member-callback
@@ -141,6 +142,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTMwODE1NTcsLTE0MTgxNzg1MjgsLT
+eyJoaXN0b3J5IjpbLTE2NTc1NDgyMjgsLTE0MTgxNzg1MjgsLT
 E5MTg1Njc3MzcsLTgwNzY2NDk5Miw0OTM4MDk1NDhdfQ==
 -->
