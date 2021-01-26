@@ -30,6 +30,8 @@ GoogleAuthController -->> Browser : REDIRECT TO main page
 - 회원가입 유도
 ```mermaid
 sequenceDiagram
+Browser ->> maum.ai : 가입
+maum.ai ->> Browser : REDIRECT /hq/oauth/authorize
 Browser ->> GoogleAuthController : /hq/oauth/signup-member-callback
 GoogleAuthController ->> GoogleAuthService : returnServiceCallback()
 
@@ -40,7 +42,7 @@ GoogleAuthController ->> GoogleAuthService : returnServiceCallback()
 - 구글 재로그인
 ```mermaid
 sequenceDiagram
-Browser ->> GoogleAuthController : /hq/oauth/aythorize
+Browser ->> GoogleAuthController : /hq/oauth/authorize
 GoogleAuthController ->> GoogleAuthController : get cookie (MaumHQ_State)
 GoogleAuthController ->> GoogleAuthService : authorize()
 GoogleAuthService ->> GoogleAuthService : if(cookie != null) check cookie (유효 시간)
@@ -142,6 +144,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc1NDgyMjgsLTE0MTgxNzg1MjgsLT
-E5MTg1Njc3MzcsLTgwNzY2NDk5Miw0OTM4MDk1NDhdfQ==
+eyJoaXN0b3J5IjpbMTk2Nzk4MDM2NSwtMTQxODE3ODUyOCwtMT
+kxODU2NzczNywtODA3NjY0OTkyLDQ5MzgwOTU0OF19
 -->
