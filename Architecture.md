@@ -4,7 +4,7 @@
 sequenceDiagram
 Browser ->> GoogleAuthController : /hq/oauth/authorize
 GoogleAuthController ->> GoogleAuthController : get cookie (MaumHQ_State)
-Note left of GoogleAuthController: if(cookie == null)<br/>초기 로그인<br/> else<br/>재로그인
+Note right of GoogleAuthController: if(cookie == null)<br/>초기 로그인<br/> else<br/>재로그인
 GoogleAuthController ->> GoogleAuthService : authorize()
 Note right of GoogleAuthService : if(cookie == null) <br/>auth token 생성,<br/> MaumHQ_State 쿠키 설정, <br/>구글 URL 생성
 GoogleAuthService -->> GoogleAuthController : return redirect URL
@@ -23,6 +23,7 @@ GoogleAuthController ->> Browser : REDIRECT maum.ai
 Browser ->> GoogleAuthController : /hq/oauth/token
 GoogleAuthController ->> GoogleAuthService : requestPublishingTokens()
 GoogleAuthService ->> GoogleAuthController : user info
+GoogleAuthController -->> Browser : REDIRECT TO main page
 
 
 ```
@@ -134,6 +135,6 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTc3NjkyNjUsLTE5MTg1Njc3MzcsLT
+eyJoaXN0b3J5IjpbLTE0MTgxNzg1MjgsLTE5MTg1Njc3MzcsLT
 gwNzY2NDk5Miw0OTM4MDk1NDhdfQ==
 -->
