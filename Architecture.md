@@ -6,7 +6,7 @@ Browser ->> GoogleAuthController : /hq/oauth/authorize
 GoogleAuthController ->> GoogleAuthController : get cookie (MaumHQ_State)
 Note left of GoogleAuthController: if(cookie == null)<br/>초기 로그인<br/> else<br/>재로그인
 GoogleAuthController ->> GoogleAuthService : authorize()
-GoogleAuthService ->> GoogleAuthService : if(cookie == null) UUID 생성, set cookie(MaumHQ_State)
+Note right of GoogleAuthService : if(cookie == null) <br/>auth token 생성,<br/> MaumHQ_State 쿠키 설정, <br/>구글 URL 생성
 GoogleAuthService -->> GoogleAuthController : return redirect URL
 GoogleAuthController ->> Browser : 
 GoogleAuthService ->> Google : 인증 요청(redirectUri, scope, state)
@@ -129,5 +129,5 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NzY0OTU2Niw0OTM4MDk1NDhdfQ==
+eyJoaXN0b3J5IjpbLTEwMTYwMjYyNDgsNDkzODA5NTQ4XX0=
 -->
