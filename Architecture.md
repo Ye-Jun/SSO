@@ -8,7 +8,9 @@ Note left of GoogleAuthController: if(cookie == null)<br/>초기 로그인<br/> 
 GoogleAuthController ->> GoogleAuthService : authorize()
 Note right of GoogleAuthService : if(cookie == null) <br/>auth token 생성,<br/> MaumHQ_State 쿠키 설정, <br/>구글 URL 생성
 GoogleAuthService -->> GoogleAuthController : return redirect URL
-GoogleAuthController ->> Browser : 
+GoogleAuthController ->> Browser : REDIRECT GOOGLE
+Browser ->> Google : accounts.google.com/o/oauth2/auth/
+Google ->> Browser : REDIRECT /hq/oauth/callback
 GoogleAuthService ->> Google : 인증 요청(redirectUri, scope, state)
 Google ->> GoogleAuthController : /hq/oauth/callback
 GoogleAuthController ->> GoogleAuthService : procGoogleCallback()
@@ -129,5 +131,5 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTYwMjYyNDgsNDkzODA5NTQ4XX0=
+eyJoaXN0b3J5IjpbMTI1NzMxNDU2NSw0OTM4MDk1NDhdfQ==
 -->
