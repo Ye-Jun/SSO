@@ -34,6 +34,9 @@ Browser ->> maum.ai : 가입
 maum.ai ->> Browser : return redirect URL
 Browser ->> GoogleAuthController : /hq/oauth/signup-member-callback
 GoogleAuthController ->> GoogleAuthService : returnServiceCallback()
+GoogleAuthService ->> GoogleAuthController : return redirect URL
+GoogleAuthController ->> Browser : return redirect URL
+Browser ->> GoogleAuthC
 
 ```
 
@@ -142,6 +145,7 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MjYxNjQyMiwtMTQxODE3ODUyOCwtMT
-kxODU2NzczNywtODA3NjY0OTkyLDQ5MzgwOTU0OF19
+eyJoaXN0b3J5IjpbLTE4NzEyMzAzOTcsLTI4MjYxNjQyMiwtMT
+QxODE3ODUyOCwtMTkxODU2NzczNywtODA3NjY0OTkyLDQ5Mzgw
+OTU0OF19
 -->
