@@ -28,7 +28,7 @@ GoogleAuthController -->> Browser : REDIRECT TO main page
 ```
 
 - 회원가입 유도
-```mermaid11111111111
+```mermaid
 sequenceDiagram
 Browser ->> maum.ai : 가입
 maum.ai ->> Browser : return redirect URL
@@ -146,7 +146,7 @@ maum.ai의 사용자 관리
 |Channel		|varchar(30)|로그인 인증 채널|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2NDQ2MDA4LDExNzM0Mzc2NTEsLTI4Mj
-YxNjQyMiwtMTQxODE3ODUyOCwtMTkxODU2NzczNywtODA3NjY0
-OTkyLDQ5MzgwOTU0OF19
+eyJoaXN0b3J5IjpbMTE3MzQzNzY1MSw4MDY0NDYwMDgsMTE3Mz
+QzNzY1MSwtMjgyNjE2NDIyLC0xNDE4MTc4NTI4LC0xOTE4NTY3
+NzM3LC04MDc2NjQ5OTIsNDkzODA5NTQ4XX0=
 -->
